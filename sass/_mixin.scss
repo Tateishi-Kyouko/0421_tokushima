@@ -129,10 +129,10 @@
 
 // hover時の遷移
 @mixin ts {
-  -webkit-transition: .4s;
-      -moz-transition: .4s;
-      -o-transition: .4s;
-    transition: .4s;
+  -webkit-transition: opacity .4s;
+      -moz-transition: opacity .4s;
+      -o-transition: opacity .4s;
+    transition: opacity .4s;
     &:hover {
       opacity: .7;
     }

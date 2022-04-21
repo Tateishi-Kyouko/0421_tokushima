@@ -5,14 +5,7 @@
 
 @import "settings"; //変数やmixinなどをまとめたファイル
 
-@import "style/cmn"; //共通cssの記述
-@import "style/module"; //module_element記述
-@import "style/top"; //トップページcssの記述
-@import "style/underpage"; //下層ページcssの記述
-@import "style/contact"; //お問い合わせページcssの記述
-
 
 @import "module/cmn"; //共通cssの記述
 @import "module/main"; //トップページcssの記述
-@import "module/contact"; //お問い合わせページcssの記述
-
+@import "module/main2"; //トップページcssの記述
