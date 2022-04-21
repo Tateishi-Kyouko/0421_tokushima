@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+/* --------------------------------------------------------------
+   Module_Element
+-------------------------------------------------------------- */
+
+/* Flex ---------- */
+.mod_flex {
+  display: flex;
+  flex-wrap: wrap;
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.mod_flex_center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.mod_flex_between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &.align-center {
+    align-items: center;
+  }
+  /* 3列4列の場合の調整 */
+  &.col3::after,
+  &.col4::before,
+  &.col4::after {
+    content: "";
+    // width: ;
+    display: block;
+    height: 0;
+  }
+  &.col4::before {
+    order: 1;
+  }
+  /* // 3列4列の場合の調整 */
+}
+
+.mod_flex_around {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &.align-center {
+    align-items: center;
+  }
+}
+
+/* Background ---------- */
+.mod_bg01 {
+  background-size: 20rem auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq-down() {
+    background-size: 100%;
+  }
+}
+
+.mod_bg02 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq-down() {
+    background-size: 100%;
+  }
+}
+
+.mod_bg03 {
+  background-repeat: repeat;
+}
+
+/* mod_layout ---------- */
+.mod_layout01 {
+  padding: 1rem 0;
+  @include mq-down() {
+    padding: .5rem 0;
+  }
+}
+
+.mod_layout02 {
+  padding: 1rem 0 0;
+  @include mq-down() {
+    padding: .5rem 0 0;
+  }
+}
+
+/* mod_btn ---------- */
+.mod_btn01 {
+  a {
+    display: block;
+    @include ts;
+  }
+}
+
+/* number ---------- */
+.mod_num {
+  counter-reset: number 0;
+  li {
+    position: relative;
+    &::before {
+      counter-increment: number 1;
+      content: counter(number) "";
+      border-radius: 50%;
+      position: absolute;
+    }
+  }
+}
+
+/* wp-pagenavi ---------- */
+.wp-pagenavi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  a,
+  .current {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 100%;
+    margin: 0 5px;
+    border-radius: 6px;
+  }
+  a {
+    color: $color_black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: $fonts_roboto;
+    background-color: $color_white;
+    border: 2px solid #dfdfdf;
+    @include mq-up() {
+      @include ts;
+      &:hover {
+        color: $color_red;
+        border-color: currentColor;
+        opacity: 1;
+      }
+    }
+    &.previouspostslink,
+    &.nextpostslink {
+      justify-content: normal;
+      width: auto;
+      margin: 0 25px;
+      font-size: 16px;
+    }
+    &.previouspostslink {
+      padding: 0 16px 0 50px;
+      background: left 15px center / 6px auto no-repeat url(../img/common/arrow_left.png);
+    }
+    &.nextpostslink {
+      padding: 0 50px 0 16px;
+      background: right 15px center / 6px auto no-repeat url(../img/common/arrow_right.png);
+    }
+  }
+  .extend {
+    margin: 0 12px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .current {
+    color: #9c9c9c;
+    background-color: #eeeeee;
+    border: 2px solid #eeeeee;
+  }
+}

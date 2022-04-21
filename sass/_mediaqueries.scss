@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+//  モバイル・スマートフォン
+//    iPad Pro    1024x1366
+//
+//    iPad       768x1024
+//    @media screen and (min-width: 768px) and (max-width: 1024px) {}
+//
+//    iPhone8 Plus   414x 736
+//    iPhone7 Plus   414x 736
+//    iPhone6 Plus   414x 736
+//
+//    Nexus5X      412x 732
+//    Nexus6P      412x 732
+//
+//    iPhoneX      375x 812
+//    iPhone8      375x 667
+//    iPhone7      375x 667
+//    iPhone6      375x 667
+//
+//    Galaxy5S     360x 640
+//
+//    iPhone5      320x 568
+
+
+// media queryの定義
+
+// min-width
+$breakpoint-up: (
+  'sm': 'screen and (min-width: 641px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1025px)',
+  'xl': 'screen and (min-width: 1201px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+  'sm': 'screen and (max-width: 640px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 1024px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+

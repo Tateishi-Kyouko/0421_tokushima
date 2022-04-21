@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+
+/* お問い合わせ
+--------------------------------------------------------------*/
+
+/* contents ----------- */
+
+/* form ----------- */
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: none;
+  font-size: .15rem;
+  // font-family: ;
+  background: #f4f4f4;
+  outline: none;
+  @include mq-down() {
+    font-size: .16rem;
+    // font-size: .17rem; design768pxの場合、375px以下の考慮
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #aaa;
+}
+input::-ms-input-placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+input[type="number"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance:textfield;
+}
+
+input[type="date"]::-webkit-inner-spin-button{
+  appearance: none;
+  -webkit-appearance: none;
+}
+input[type="date"]::-webkit-clear-button{
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input {
+  min-height: .55rem;
+  padding: .05rem .25rem;
+}
+textarea {
+  height: 1.65rem;
+  padding: .2rem .25rem;
+  resize: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+select,
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../img/contact/select_arrow.png);
+  background-repeat: no-repeat;
+  background-size: .074rem auto;
+  background-position: center right .2rem;
+  cursor: pointer;
+}
+
+/* 検索 ----------- */
+.search {
+  input[type=search] {
+    -webkit-appearance: none;
+    display: inline-block;
+    padding: .05rem .1rem;
+    width: 2.2rem;
+    height: .4rem;
+    font-size: .16rem;
+    box-sizing: border-box;
+    border-radius: .04rem;
+    border: 1px solid #ccc;
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;
+    }
+  }
+  input[type=submit] {
+    -webkit-appearance: none;
+    padding: 0 10px;
+    width: .35rem;
+    height: 0;
+    padding: .4rem 0 0;
+    border: none;
+    background: center / .2rem auto no-repeat url(../img/column/search_ico.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+
+.form {
+  width: 100%;
+  dt,
+  dd {
+    font-size: .16rem;
+    // font-family: ;
+    text-align: left;
+  }
+  dt {
+    width: 2.4rem;
+    float: left;
+    clear: both;
+    padding: .2rem 0 0;
+    font-weight: 600;
+    @include mq-down() {
+      width: 100%;
+      float: none;
+      padding: .23rem 0 .05rem;
+    }
+  }
+  dd {
+    padding: 0 0 .2rem 2.4rem;
+    &.radio {
+      input[type="radio"] {
+        display: none;
+        appearance: none;
+      }
+      input[type="radio"] + span {
+        // height: .55rem;
+        // line-height: .55rem;
+        padding-left: .27rem;
+        width: .18rem;
+        height: .18rem;
+        min-height: 0;
+        font-size: .17rem;
+        background-image: url(../img/contact/radio.png);
+        background-repeat: no-repeat;
+        background-size: .18rem auto;
+        background-position: left center;
+        cursor: pointer;
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        @include mq-down() {
+          height: auto;
+          line-height: 1.8;
+        }
+      }
+      input[type="radio"] + span {
+        cursor: pointer;
+      }
+      input[type="radio"]:checked + span {
+        background-image: url(../img/contact/radio_checked.png);
+      }
+    }
+  }
+}
+
+.check {
+  input[type="checkbox"] {
+    display: none;
+    & + span {
+      height: auto;
+      padding-left: .25rem;
+      line-height: 1;
+      cursor: pointer;
+      position: relative;
+      &::before {
+        content: "";
+        width: .2rem;
+        height: .2rem;
+        background-image: url(../img/contact/checkbox.png);
+        background-repeat: no-repeat;
+        background-size: .2rem auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &:checked + span::before {
+      background-image: url(../img/contact/checkbox_checked.png);
+    }
+  }
+}
+
+/* form_btn ----------- */
+.form_btn {
+  margin: .4rem 0 0;
+  input {
+    display: inline-block;
+    width: 3.3rem;
+    height: .68rem;
+    line-height: .68rem;
+    min-height: 100%;
+    margin: 0 .06rem;
+    padding: 0;
+    color: #fff;
+    font-size: .16rem;
+    // font-family: ;
+    background-color: $color_orange;
+    background-image: url(../img/contact/arrow_right.png);
+    background-repeat: no-repeat;
+    background-position: center right .48rem;
+    background-size: .0741rem auto;
+    cursor: pointer;
+    @include ts;
+    @include mq-down() {
+      width: 3.31rem;
+      margin: 0;
+      background-position: center right .5rem;
+    }
+  }
+}
+
+/* privacy ----------- */
+.privacy {
+  overflow-y: scroll;
+  @include mq-down() {
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      width: .06rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #b5b5b5;
+      border-radius: .1rem;
+    }
+  }
+}
+
+/* エラー　デフォルト ----------- */
+// .mw_wp_form .error { 箱はspanになります
+//   font-size: 93%;
+//   color: #B70000;
+//   display: block;
+// }
+
+/* input ----------- */
+.mw_wp_form_input {}
+
+/* confirm ----------- */
+.mw_wp_form_confirm {}
+
+/* thanks ----------- */
+.mw_wp_form_complete {}
+
+// MW WP Formの場合(確認画面がある時はこちら)
+//@import "wp_contact/mwform";
+
+
+
+
+// Contct Form 7の場合
+//@import "wp_contact/cf7";
+.wpcf7-spinner {
+  display: none !important;
+}

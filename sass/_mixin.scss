@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+// @mixin　メンテナンスがよい。引数を持たせることができる為カスタマイズしやすい
+// グルーピングされない、最終的に吐き出される際コードが多くなる
+// 色や数字のみ変わるパーツのとき
+
+
+// font-size, line-height
+@mixin fts($fts, $lin: 24) {
+  $rem: $fts / 10;
+  $linS: $lin / $fts;
+  font-size: #{$rem}rem;
+  line-height: $linS;
+}
+
+// absolute
+@mixin absolute($top:null, $right:null, $bottom:null, $left:null){
+  position: absolute;
+  @if $top != null{
+    top: $top;
+  }
+  @if $right != null{
+    right: $right;
+  }
+  @if $bottom != null{
+    bottom: $bottom;
+  }
+  @if $left != null{
+    left: $left;
+  }
+}
+//使い方
+// p{
+//   @include absolute(0,0,0,0);
+// }
+// p.vertical{
+//   @include absolute($top:0, $bottom:0);　//個別に指定したい場合
+// }
+
+
+// border-radius
+@mixin kadomaru($radius) {
+  border-radius: $radius; // CSS3草案
+  -webkit-border-radius: $radius; // Safari,Google Chrome用
+  -moz-border-radius: $radius; // Firefox用
+}
+
+// 図形：正円
+@mixin circle($size){
+  width: $size + px;
+  height: $size + px;
+  border-radius: 100%;
+}
+
+// 天地左右に中央配置
+@mixin centerCenter {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// 1行のテキストを上下中央に配置　　IEによるハック入り
+@mixin middleline($height, $ie: 0){
+  height: $height + px;
+  line-height: $height + px;
+  &:not(:target){
+    line-height: $height + $ie + px + \9;
+  }
+  :root & {
+    line-height: $height + $ie + px + \9;
+  }
+}
+
+// 要素内のテキストをとばす
+@mixin hideText($padding_top) {
+  height: 0;
+  padding: $padding_top 0 0;
+  overflow:hidden;
+}
+
+// 3点リーダー「...」
+@mixin truncate($width) {
+  width: $width;
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
+// FontAwesome
+@mixin withFA ($uni, $col, $hov){
+  color: $col;
+  text-decoration: none;
+  &:before{
+    margin-right: .5em;
+    font-family: "Font Awesome 5 Free";
+    content: $uni;
+  }
+  &:hover{
+    color: $hov;
+    transition-duration:.3s;
+    transition-timing-function:ease-in-out;
+    &:before{
+      transition-duration:.3s;
+      transition-timing-function:ease-in-out;
+      color: $hov;
+    }
+  }
+}
+
+// リンクボタン
+@mixin cmnBtn ($col, $hov){
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  padding: .5em 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  background: $col;
+  font-size: 21px;
+  color: #fff;
+  &:hover {
+    background-color: $hov;
+  }
+}
+
+// hover時の遷移
+@mixin ts {
+  -webkit-transition: .4s;
+      -moz-transition: .4s;
+      -o-transition: .4s;
+    transition: .4s;
+    &:hover {
+      opacity: .7;
+    }
+}

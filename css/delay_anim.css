@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/* ロード・スクロール エフェクト設定
+--------------------------------------------------------------*/
+
+/* 基本 ---------- */
+
+.set_delay_anim {
+  opacity: 0;
+  -webkit-transition: opacity .7s, transform .7s;
+  -moz-transition: opacity .7s, transform .7s;
+  -o-transition: opacity .7s, transform .7s;
+  transition: opacity .7s, transform .7s;
+}
+
+.set_delay_anim.show {
+  opacity: 1;
+}
+
+/* 上からフェードイン ---------- */
+
+.fade_upper {
+  -webkit-transform: translateY(-.8rem);
+     -moz-transform: translateY(-.8rem);
+      -ms-transform: translateY(-.8rem);
+       -o-transform: translateY(-.8rem);
+          transform: translateY(-.8rem);
+}
+
+.fade_upper.show {
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* 下からフェードイン ---------- */
+
+.fade_under {
+  -webkit-transform: translateY(.8rem);
+     -moz-transform: translateY(.8rem);
+      -ms-transform: translateY(.8rem);
+       -o-transform: translateY(.8rem);
+          transform: translateY(.8rem);
+}
+
+.fade_under.show {
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* 右からフェードイン ---------- */
+
+.fade_right {
+  -webkit-transform: translateX(.8rem);
+     -moz-transform: translateX(.8rem);
+      -ms-transform: translateX(.8rem);
+       -o-transform: translateX(.8rem);
+          transform: translateX(.8rem);
+}
+
+.fade_right.show {
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}
+
+/* 左からフェードイン ---------- */
+
+.fade_left {
+  -webkit-transform: translateX(-.8rem);
+     -moz-transform: translateX(-.8rem);
+      -ms-transform: translateX(-.8rem);
+       -o-transform: translateX(-.8rem);
+          transform: translateX(-.8rem);
+}
+
+.fade_left.show {
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
+}

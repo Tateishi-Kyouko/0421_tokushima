@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Reset ---------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+blockquote::before,
+blockquote::after,
+q::before, q::after {
+  content: "";
+  content: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+a,
+a * {
+  text-decoration: none;
+  -webkit-transition: opacity .4s ease;
+  transition: opacity .4s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a img {
+  border: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  font-size: 0;
+  border: 0;
+  line-height: 0;
+  vertical-align: top;
+}
+
+address {
+  font-style: normal;
+}
+
+/* form reset */
+input[type=text],
+input[type=tel],
+input[type=fax],
+input[type=submit],
+input[type=email],
+textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  font-family: "游ゴシック", YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo, sans-serif;
+  font-weight: 500;
+}
+
+textarea {
+  resize: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+}
+
+[disabled] {
+  cursor: default;
+}
+
+/*--------------------------------------------------*/
+/* Default ---------------------------------------------*/
+.clearfix::after {
+  content: " ";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  line-height: 0;
+  font-size: 0;
+}
+
+.clearfix {
+  clear: both !important;
+}
+/*# sourceMappingURL=reset.css.map */
