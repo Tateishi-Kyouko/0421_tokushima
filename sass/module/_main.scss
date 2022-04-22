@@ -6,35 +6,219 @@
 /* fv ----------- */
 
 .fv {
-  background: center top / cover no-repeat #c7e7ef url(../img/fv_bg_pc@2x.png);
+  padding: 0 0 .35rem;
+  background: center top / 12rem auto no-repeat #c7e7ef url(../img/fv_bg_pc.png);
+  &_header {
+    height: .95rem;
+    .logo {
+      width: 1.3rem;
+      margin-right: 1.1rem;
+    }
+    .desc {
+      width: 5.65rem;
+    }
+  }
+  &_catch {
+    width: 8.16rem;
+    margin-left: 1.7rem;
+  }
+  &_text {
+    display: block;
+    width: 5.54rem;
+    margin: .3rem auto .7rem;
+  }
+  &_cot {
+    padding: 0 0 .1rem;
+    border: 2px solid #013591;
+    &_stit {
+      margin: 0 auto;
+      text-align: center;
+      .inline {
+        display: inline-block;
+        width: 7.84rem;
+        margin: 0 0 -.28rem;
+        padding: 0 .07rem .1rem;
+        background: #c7e7ef;
+        position: relative;
+        top: -.28rem;
+      }
+    }
+    &_lists {
+      margin: -.1rem 0 0;
+      &_item {
+        height: .68rem;
+        padding: .2rem 0 0 1rem;
+        background-position: center left;
+        background-repeat: no-repeat;
+        &.item1 {
+          background-size: .87rem auto;
+          background-image: url(../img/fv_item1_ico.svg);
+          img {
+            width: 1.79rem;
+          }
+        }
+        &.item2 {
+          margin: 0 .72rem 0 .9rem;
+          background-size: .73rem auto;
+          background-image: url(../img/fv_item2_ico.svg);
+          position: relative;
+          &::before,
+          &::after {
+            content: "";
+            width: 2px;
+            height: .58rem;
+            background: #013591;
+            position: absolute;
+            top: .1rem;
+          }
+          &::before {
+            left: -.35rem;
+          }
+          &::after {
+            right: -.5rem;
+          }
+          img {
+            width: 1.16rem;
+          }
+        }
+        &.item3 {
+          background-size: .84rem auto;
+          background-image: url(../img/fv_item3_ico.svg);
+          img {
+            width: 2.26rem;
+          }
+        }
+      }
+    }
+  }
+  @include mq-down() {
+    padding: 0 0 .15rem;
+    background: top center / cover no-repeat #c7e7ef url(../img/fv_bg_sp.png);
+    &_header {
+      height: .5rem;
+      .logo {
+        width: .65rem;
+        margin-right: .15rem;
+      }
+      .desc {
+        width: 75%;
+      }
+    }
+    &_catch {
+      width: 100%;
+      margin-left: 0;
+    }
+    &_text {
+      width: 100%;
+      margin: .15rem auto .35rem;
+    }
+    &_cot {
+      width: calc(100% - .2rem);
+      margin: 0 auto;
+      padding: 0 0 .2rem;
+      border-width: 1px;
+      &_stit {
+        .inline {
+          width: 65%;
+          margin: 0 auto -.2rem;
+          padding: 0;
+          top: -.2rem;
+        }
+      }
+      &_lists {
+        margin: -.2rem 0 0;
+        &_item {
+          height: .36rem;
+          padding: .3rem 0 0;
+          background-position: center top;
+          &.item1 {
+            background-size: .35rem auto;
+            background-position: center top .1rem;
+            img {
+              width: .9rem;
+            }
+          }
+          &.item2 {
+            margin: 0 .3rem;
+            background-size: .3rem auto;
+            background-position: center top .1rem;
+            position: relative;
+            &::before,
+            &::after {
+              width: 1px;
+              height: 100%;
+              top: .1rem;
+            }
+            &::before {
+              left: -.15rem;
+            }
+            &::after {
+              right: -.15rem;
+            }
+            img {
+              width: .58rem;
+            }
+          }
+          &.item3 {
+            background-size: .35rem auto;
+            img {
+              width: 1.13rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* contants ----------- */
 .contants {
-  margin: 0 auto;
-  position: relative;
+  padding: .5rem 0 .05rem;
   background: center / .12rem auto repeat url(../img/repeat_bg.png);
-  @include mq-up() {
-    width: 12rem;
+  &_wrap {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+      position: absolute;
+    }
+    &::before {
+      width: 1.37rem;
+      height: 1.14rem;
+      background-image: url(../img/sec_deco1.svg);
+      top: .3rem;
+      left: .55rem;
+    }
+    &::after {
+      width: 1.44rem;
+      height: 1.56rem;
+      background-image: url(../img/sec_deco2.svg);
+      top: .15rem;
+      right: .75rem;
+    }
   }
-  &_img {}
+  &_title {
+    width: 6.4rem;
+    margin: 0 auto .6rem;
+  }
+  &_desc {
+    width: 6.6rem;
+    margin: 0 auto .4rem;
+  }
   &_link {
-    width: 10.88rem;
-    position: absolute;
-    left: calc(50% - 5.44rem);
-    bottom: 0;
     .item {
       width: 5.2rem;
+      margin: 0 0 .3rem;
       position: relative;
-      @include mq-up() {
-        margin: 0 .12rem .3rem;
-      }
       .btn {
         display: block;
-        width: 2.22rem;
+        width: 2.24rem;
         position: absolute;
-        left: calc(50% - 1.11rem);
-        bottom: .38rem;
+        left: calc(50% - 1.12rem);
+        bottom: .35rem;
         @include mq-up() {
           @include ts;
         }
@@ -42,16 +226,37 @@
     }
   }
   @include mq-down() {
-    padding: 0 0 9rem;
+    padding: .3rem 0 .05rem;
+    background: center / .06rem auto repeat url(../img/repeat_bg.png);
+    &_wrap {
+      &::before {
+        width: .65rem;
+        height: .57rem;
+        left: 0;
+      }
+      &::after {
+        width: .6rem;
+        height: .68rem;
+        right: 0;
+      }
+    }
+    &_title {
+      width: 70%;
+      margin: 0 auto .3rem;
+    }
+    &_desc {
+      width: 80%;
+      margin: 0 auto .2rem;
+    }
     &_link {
-      width: calc(100% - .2rem);
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      bottom: .2rem;
       .item {
         width: 100%;
-        margin: 0 0 .08rem;
+        margin: 0 .1rem .15rem;
+        .btn {
+          width: 1.5rem;
+          left: calc(50% - .75rem);
+          bottom: .25rem;
+        }
       }
     }
   }
@@ -79,24 +284,43 @@
     &::before {
       width: 1.1rem;
       height: .57rem;
-      background-image: url(../img/contact_deco1@2x.png);
+      background-image: url(../img/contact_deco1.svg);
       left: -1.5rem;
     }
     &::after {
       width: 1.38rem;
       height: .57rem;
-      background-image: url(../img/contact_deco2@2x.png);
+      background-image: url(../img/contact_deco2.svg);
       right: -1.75rem;
     }
   }
   a {
     display: block;
-    width: 3.18rem;
+    width: 3.22rem;
     @include mq-up() {
       @include ts;
     }
   }
   @include mq-down() {
-
+    padding: .25rem 0 .3rem;
+    .deco {
+      &::before,
+      &::after {
+        top: 0;
+      }
+      &::before {
+        width: .55rem;
+        height: .3rem;
+        left: -.6rem;
+      }
+      &::after {
+        width: .69rem;
+        height: .3rem;
+        right: -.75rem;
+      }
+    }
+    a {
+      width: 2.2rem;
+    }
   }
 }

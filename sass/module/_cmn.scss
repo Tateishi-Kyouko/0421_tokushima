@@ -6,7 +6,7 @@
 -------------------------------------------------------------- */
 
 body {
-	min-width: 1000px;
+	min-width: 1100px;
 	color: $font_color;
 	font-size: .14rem; //14pxの場合
 	font-family: $fonts;
@@ -25,26 +25,6 @@ body {
 	margin: 0 auto;
 	@include mq-down() {
 		width: calc(100% - .2rem);
-	}
-}
-
-a {
-	color: $link_color;
-}
-
-.img_switch {
-    visibility: hidden;
-}
-
-.pconly {
-	@include mq-down() {
-		display: none !important;
-	}
-}
-
-.sponly {
-	@include mq-up() {
-		display: none;
 	}
 }
 
@@ -104,90 +84,3 @@ a {
   }
 }
 
-/* Background ---------- */
-
-.mod_bg01 {
-  background-size: 20rem auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  @include mq-down() {
-    background-size: 100%;
-  }
-}
-
-.mod_bg02 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  @include mq-down() {
-    background-size: 100%;
-  }
-}
-
-.mod_bg03 {
-  background-repeat: repeat;
-}
-
-/* mod_layout ---------- */
-
-.mod_layout01 {
-  padding: 1rem 0;
-  @include mq-down() {
-    padding: .5rem 0;
-  }
-}
-
-.mod_layout02 {
-  padding: 1rem 0 0;
-  @include mq-down() {
-    padding: .5rem 0 0;
-  }
-}
-
-/* mod_tit ---------- */
-
-.mod_tit {}
-
-/* mod_btn ---------- */
-
-.mod_btn01 {
-  a {
-    display: block;
-    @include ts;
-  }
-}
-
-/* number ---------- */
-
-.mod_num {
-  counter-reset: number 0;
-  li {
-    position: relative;
-    &::before {
-      counter-increment: number 1;
-      content: counter(number) "";
-      // font-family: ;
-      border-radius: 50%;
-      position: absolute;
-    }
-  }
-}
-
-
-
-/* --------------------------------------------------------------
-   Contents_共通
--------------------------------------------------------------- */
-
-/* Title ---------- */
-
-/* Text ---------- */
-
-/* fontawesome ---------- */
-
-.fontawesome::before {
-	display: inline-block;
-  content: "\f105";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
