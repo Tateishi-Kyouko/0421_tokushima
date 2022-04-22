@@ -24,7 +24,7 @@ body {
 	width: $main_width;
 	margin: 0 auto;
 	@include mq-down() {
-		width: calc(100% - .2rem);
+		width: calc(100% - .3rem);
 	}
 }
 
@@ -83,4 +83,3 @@ body {
     align-items: center;
   }
 }
-

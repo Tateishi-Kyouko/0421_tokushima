@@ -28,7 +28,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .container {
-    width: calc(100% - .2rem);
+    width: calc(100% - .3rem);
   }
 }
 
@@ -147,7 +147,7 @@ body {
   margin-right: 1.1rem;
 }
 
-.fv_header .desc {
+.fv_header .head {
   width: 5.65rem;
 }
 
@@ -241,35 +241,37 @@ body {
 
 @media screen and (max-width: 767px) {
   .fv {
-    padding: 0 0 .15rem;
-    background: top center/cover no-repeat #c7e7ef url(../img/fv_bg_sp.png);
+    padding: .1rem 0 .3rem;
+    background: top center/100% auto no-repeat #c7e7ef url(../img/fv_bg_sp.png);
   }
   .fv_header {
-    height: .5rem;
+    display: block;
+    height: auto;
   }
   .fv_header .logo {
     width: .65rem;
-    margin-right: .15rem;
+    margin-right: 0;
   }
-  .fv_header .desc {
-    width: 75%;
+  .fv_header .head {
+    width: 80%;
+    margin: .2rem auto .15rem;
   }
   .fv_catch {
-    width: 100%;
-    margin-left: 0;
+    width: 95%;
+    margin-left: 5%;
   }
   .fv_text {
     width: 100%;
-    margin: .15rem auto .35rem;
+    margin: .15rem auto 1.3rem;
   }
   .fv_cot {
-    width: calc(100% - .2rem);
+    width: 100%;
     margin: 0 auto;
     padding: 0 0 .2rem;
     border-width: 1px;
   }
   .fv_cot_stit .inline {
-    width: 65%;
+    width: 70%;
     margin: 0 auto -.2rem;
     padding: 0;
     top: -.2rem;
@@ -401,16 +403,19 @@ body {
     right: 0;
   }
   .contants_title {
-    width: 70%;
+    width: 80%;
     margin: 0 auto .3rem;
   }
   .contants_desc {
-    width: 80%;
+    width: calc(100% - .3rem);
     margin: 0 auto .2rem;
+  }
+  .contants_link {
+    padding-left: .05rem;
   }
   .contants_link .item {
     width: 100%;
-    margin: 0 .1rem .15rem;
+    margin: 0 .15rem .15rem;
   }
   .contants_link .item .btn {
     width: 1.5rem;
