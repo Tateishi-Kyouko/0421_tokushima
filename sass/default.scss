@@ -20,16 +20,12 @@ html {
   }
 }
 */
- 
+
 /* SP用設定 */
 @media screen and (max-width: 767px) {
   html {
     /* SP基準サイズ384pxの場合 */
     font-size: 26.04vw;
-    /* SP基準サイズ375pxの場合 */
-    font-size: 26.67vw;
-    /* SP基準サイズ320pxの場合 */
-    /* font-size: 31.25vw; */
   }
 }
 
@@ -62,7 +58,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body {
-  font-family: YuGothic, 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-weight: 500;
@@ -119,7 +114,7 @@ a:hover {
 }
 
 input, button, select, textarea {
-  font-family: YuGothic, 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;
+  font-family: "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
   font-weight: 500;
   border-radius: 0;
 }
@@ -137,7 +132,7 @@ textarea {
 
 input[type="submit"], input[type="image"], button {
   cursor: pointer;
-  transition: all .4s ease;
+  transition: opacity .4s ease;
 }
 
 input[type="submit"]:hover, input[type="image"]:hover, button:hover {

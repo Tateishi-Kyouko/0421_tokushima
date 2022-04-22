@@ -10,65 +10,8 @@ $color_orange: #f2a531;
 $color_green: #3a614f;
 
 
-
-$fonts02: 'Helvetica Neue', Arial, 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', sans-serif;
-
-$fonts_zenmaru: 'Zen Maru Gothic', sans-serif;
-
-$fonts_roboto: 'Roboto', sans-serif;
-
-$fonts_noto: 'Noto Sans JP', sans-serif;
-
-$fonts_serif: 'Noto Serif JP', serif;
-
-$fonts_yugo: YuGothic, 'Yu Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;
-
 $fonts: "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
 
-$fonts_yumin: "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
-
-$fonts_hiramin_w6: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HiraMinProN", "游明朝体", "Yu Mincho", YuMincho, "HG明朝E", serif;
-
-$fonts_hiramin_w3: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝体", "Yu Mincho", YuMincho, "HG明朝E", serif;
-
-$fonts_hirakaku: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3', "游ゴシック", YuGothic,'Yu Gothic','メイリオ', Meiryo, sans-serif;
-
-
-
-@mixin noto-sans_900 {
-  font-family: $fonts;
-  font-weight: 900;
-}
-@mixin noto-sans_700 {
-  font-family: $fonts;
-  font-weight: 700;
-}
-@mixin noto-sans_400 {
-  font-family: $fonts;
-  font-weight: 400;
-}
-
-@mixin roboto_900 {
-  font-family: $fonts_roboto;
-  font-weight: 900;
-}
-@mixin roboto_700 {
-  font-family: $fonts_roboto;
-  font-weight: 700;
-}
-
-@mixin zenmaru_900 {
-  font-family: $fonts_zenmaru;
-  font-weight: 900;
-}
-@mixin zenmaru_700 {
-  font-family: $fonts_zenmaru;
-  font-weight: 700;
-}
-@mixin zenmaru_500 {
-  font-family: $fonts_zenmaru;
-  font-weight: 500;
-}
 
 
 
